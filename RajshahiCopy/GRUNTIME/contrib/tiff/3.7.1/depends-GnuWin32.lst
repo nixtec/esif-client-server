@@ -1,0 +1,17 @@
+advapi32.dll
+dciman32.dll
+ddraw.dll
+gdi32.dll
+glu32.dll
+glut32.dll
+jpeg62.dll
+kernel32.dll
+libimage.dll
+msvcrt.dll
+ntdll.dll
+ole32.dll
+opengl32.dll
+rpcrt4.dll
+user32.dll
+winmm.dll
+zlib1.dll

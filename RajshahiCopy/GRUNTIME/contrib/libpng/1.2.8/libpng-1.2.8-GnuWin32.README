@@ -1,0 +1,65 @@
+* LibPng-1.2.8 for Windows *
+============================
+
+What is it?
+-----------
+LibPng: PNG image compression library
+
+Description
+-----------
+The Portable Network Graphics (PNG) format was designed to replace the
+older and simpler GIF format and, to some extent, the much more complex
+TIFF format. (See the main page or the history page for background
+information.)
+
+Two major uses are: the World Wide Web WWW) and image-editing.
+For the Web, PNG really has three main advantages over GIF: alpha channels
+(variable transparency), gamma correction (cross-platform control of image
+brightness), and two-dimensional interlacing (a method of progressive
+display). PNG also compresses better than GIF in almost every case, but
+the difference is generally only around 5% to 25%, not a large enough
+factor to encourage folks to switch on that basis alone.
+
+One GIF feature that PNG does not try to reproduce is multiple-image support,
+especially animations; PNG was and is intended to be a single-image format
+only. (A very PNG-like extension format called MNG was finalized in mid-1999
+and is beginning to be supported by various applications, but MNGs and PNGs
+will have different file extensions and different purposes.) 
+	 
+Homepage
+--------
+http://www.libpng.org/pub/png
+	 
+System
+------
+- MS-Windows 95 / 98 / ME / NT / 2000 / XP with msvcrt.dll
+- if msvcrt.dll is not in your Windows/System folder, get it from
+  Microsoft <http://support.microsoft.com/default.aspx?scid=kb;en-us;259403">
+  or by installing Internet Explorer 4.0 or higher
+  <http://www.microsoft.com/windows/ie> 
+- zlib <http://gnuwin32.sourceforge.net/packages/zlib.htm> 
+- libgw32c <http://gnuwin32.sourceforge.net/packages/libgw32c.htm> (for developing with LibPng library)
+
+Notes
+-----
+- Bugs and questions on this MS-Windows port: gnuwin32@users.sourceforge.net
+
+Package Availability
+--------------------
+- in: http://gnuwin32.sourceforge.net
+
+Sources
+-------
+- libpng-1.2.8-src.zip
+
+Compilation
+-----------
+The package has been compiled with GNU auto-tools, GNU make, and Mingw
+(GCC for MS-Windows). Any differences from the original sources are given
+in libpng-1.2.8-GnuWin32.diffs in libpng-1.2.8-src.zip. Libraries needed
+for compilation can be found at the lines starting with 'LIBS = ' in the
+Makefiles. Usually, these are standard libraries provided with Mingw, or
+libraries from the package itself; 'gw32c' refers to the libgw32c package,
+which provides MS-Windows substitutes or stubs for functions normally found in
+Unix. For more information, see: http://gnuwin32.sourceforge.net/compile.html
+and http://gnuwin32.sourceforge.net/packages/libgw32c.htm.

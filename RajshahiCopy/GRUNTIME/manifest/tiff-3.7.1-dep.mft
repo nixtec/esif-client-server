@@ -1,0 +1,6 @@
+bin/glut32.dll
+bin/jpeg62.dll
+bin/libimage.dll
+bin/zlib1.dll
+manifest/tiff-3.7.1-dep.mft
+manifest/tiff-3.7.1-dep.ver

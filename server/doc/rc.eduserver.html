@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>rc.eduserver</title>
+  </head>
+  <body>
+    <pre>
+    <b>rc.eduserver</b> - server control utility.
+
+    Usage: <b>rc.eduserver</b> {start|stop|restart|reload}
+
+      The server 'eduserver' program is scheduled to be automatically executed
+    during system startup. But there may be situations when you will want to
+    manually control the server. Mainly, when you will make a change on college
+    password database (using any of the utilities available), you must tell
+    the server to re-load the password database using the 'reload' option of
+    the script.
+
+    <b>Options</b>
+
+    <i>start</i>   - runs a new instance of the server. never do this unless
+	      you know what you are doing. you may use this option only if
+	      you have manually stopped the server using the 'stop' option
+              of this script.
+    <i>stop</i>    - stops the running server process. all connections will be
+              closed. clients will receive FIN.
+    <i>restart</i> - restarts the server process. it just stops the running
+              server and then starts it again.
+    <i>reload</i>  - reload the password database. it makes the server re-read
+              the password database. you will need to do this after a
+              modification of the server password database using any
+              of the password database management utilities.
+
+    All other options are ignored.
+
+    </pre>
+    <a href="server-utils.html">Server Utilisies</a>
+  </body>
+</html>

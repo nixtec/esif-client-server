@@ -1,0 +1,79 @@
+
+**verify_form**
+
+entry2->lookup
+Student's Name : 
+entry3->lookup
+Father's Name : 
+entry4->lookup
+Mother's Name : 
+combo_entry1->lookup
+Group : Science
+entry->lookup
+Session : 
+combo_entry2->lookup
+Board : Rajshahi
+entry6->lookup
+Class Roll Number : 
+combo_entry3->lookup
+combo_entry4->lookup
+combo_entry5->lookup
+Birth Date : 01-Jan-1990
+entry7->lookup
+TOT List Serial Number : 
+combo_entry6->lookup
+Section : A
+entry8->lookup
+College Code : 0110
+entry9->lookup
+College Name :  RAJSHAHI GOVT. COLLEGE
+combo_entry7->lookup
+Previous Board : Rajshahi
+entry10->lookup
+Previous Year : 
+entry11->lookup
+Previous Roll Number : 
+entry12->lookup
+Previous Registration Number : 
+entry13->lookup
+entry14->lookup
+Previous Session : -
+combo_entry8->lookup
+Group : Male
+combo_entry9->lookup
+Religion : Islam
+entry15->lookup
+Subject 0 : 
+entry16->lookup
+Subject 1 : 
+entry17->lookup
+Subject 2 : 
+entry18->lookup
+Subject 3 : 
+entry19->lookup
+Subject 4 : 
+entry20->lookup
+Subject 5 : 
+entry21->lookup
+Subject 6 : 
+entry22->lookup
+Subject 7 : 
+entry23->lookup
+Subject 8 : 
+entry24->lookup
+Subject 9 : 
+entry25->lookup
+Subject 10 : 
+entry26->lookup
+Subject 11 : 
+entry27->lookup
+Subject 12 : 
+entry28->lookup
+Subject 13 : 
+entry29->lookup
+Subject 14 : 
+Verifying student name
+***ERROR*** in student name
+Freeing memory
+**Complete**
+Creating message window

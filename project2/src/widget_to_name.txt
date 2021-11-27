@@ -1,0 +1,28 @@
+# the following entries may be ignored in future
+
+fa_name => entry3
+mo_name => entry4
+
+# birthdate is most probably
+birth_yer => combo5
+
+tot_list => entry7
+
+prev_year  => entry10
+prev_roll  => entry11
+prev_reg   => entry12
+prev_sess1 => entry13
+prev_sess2 => entry14
+
+photo => button4
+
+
+int ignore_fa_name;
+int ignore_mo_name;
+int ignore_birthdate;
+int ignore_totlist;
+int ignore_prev_year;
+int ignore_prev_roll;
+int ignore_prev_reg;
+int ignore_prev_sess;
+int ignore_photo;

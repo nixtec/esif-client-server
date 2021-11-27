@@ -1,0 +1,18 @@
+Server Utilities:
+
+Following Utilities for server are available:
+
+1. delpass - delete college code/pass from database
+2. dispass - disable a college
+3. enapass - enables a college
+4. inspass - insert college code/pass into database
+5. showpassdb - displays college code/password database
+6. showregdb - dumps a college database for a session
+
+Following helper scripts are availalbe for ease of management:
+
+1. build.sh - builds server project
+2. rebuild.sh - rebuilds server project
+3. rc.eduserver - controls the server start/stop/reload
+
+

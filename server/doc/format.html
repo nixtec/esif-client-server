@@ -1,0 +1,187 @@
+<html>
+  <head>
+    <title>Formats of input</title>
+  </head>
+  <body>
+    <pre>
+      <h1>Image (Photo) Format (Client Side):</h1>
+      <b>
+        1x1 Inch, JPEG Format (preferred).
+	Size as much small as possible (less than 5 KB preferred).
+      </b>
+    </pre>
+    <pre>
+      <h1>Time Format:</h1>
+      Start and End time for a college must be specified as follows:
+
+      <b>yyyy-mm-dd.HH:MM:SS</b>
+
+      For example,
+
+      <b>2005-11-15.18:31:01</b>
+    </pre>
+    <pre>
+      <h1>Group Conversion:</h1>
+        Science                    =&gt; 0
+        Social Science             =&gt; 1
+	Arts                       =&gt; 2
+	Commerce                   =&gt; 3
+	Agriculture                =&gt; 4
+	Home Economics             =&gt; 5
+	Islamic Studies            =&gt; 6
+	Music                      =&gt; 7
+	Business                   =&gt; 8
+    </pre>
+    <pre>
+      <h1>Board Conversion:</h1>
+        Dhaka                    =&gt; 0
+        Comilla                  =&gt; 1
+	Rajshahi                 =&gt; 2
+	Jessore                  =&gt; 3
+	Chittagong               =&gt; 4
+	Barisal                  =&gt; 5
+	Sylhet                   =&gt; 6
+        Madrasa                  =&gt; 7
+        Technical                =&gt; 8
+        Others                   =&gt; 9
+    </pre>
+    <pre>
+      <h1>Section Conversion:</h1>
+      none                       =&gt; 0
+	A                        =&gt; 1
+	B                        =&gt; 2
+	C                        =&gt; 3
+	D                        =&gt; 4
+	E                        =&gt; 5
+	F                        =&gt; 6
+    </pre>
+    <pre>
+      <h1>Gender Conversion:</h1>
+	Male                     =&gt; 0
+	Female                   =&gt; 1
+    </pre>
+    <pre>
+      <h1>Religion Conversion:</h1>
+	Islam                    =&gt; 0
+	Hindu                    =&gt; 1
+	Buddist                  =&gt; 2
+	Christian                =&gt; 3
+	Others                   =&gt; 4
+    </pre>
+    <pre>
+      <h1>Subject Code File:</h1>
+      (This file contains subject code =&gt; name mapping information)
+        subcode.txt
+
+
+      File Format:
+        code Name
+
+      For example:
+
+       101 Bangla 1st Paper
+
+    </pre>
+    <pre>
+      <h1>Special Subject Code File:</h1>
+        special.txt
+
+
+      File Format:
+        code1
+	code2
+        ...
+
+      For example:
+
+      192
+
+    </pre>
+    <pre>
+      <h1>Pair Matching File:</h1>
+      (This file contains subject code pair information)
+        pair.txt
+
+
+      File Format:
+        code1 code2                  &lt; both must be matched
+	code2 code1                  &lt; both must be matched
+	code3 002 code7 code8        &lt; all (excluding 002)  must be matched
+	code3 001 code7 code8        &lt; any two must be matched
+        ...
+
+      For example:
+        101 102
+        102 101
+        192 002 191 193
+        191 192
+        193 192
+        136 001 203 204
+        ...
+
+    </pre>
+    <pre>
+      <h1>Groupwise Subject Code Files:</h1>
+      (Only codes in this file can be filled in the form)
+	Science                  =&gt; sub_sc.txt
+	Social Science           =&gt; sub_so_sc.txt
+	Arts                     =&gt; sub_arts.txt
+	Commerce                 =&gt; sub_com.txt
+	Agriculture              =&gt; sub_agri.txt
+	Home Economics           =&gt; sub_home_eco.txt
+	Islamic Studies          =&gt; sub_is_st.txt
+	Music                    =&gt; sub_music.txt
+	Business                 =&gt; sub_business.txt
+    </pre>
+    <pre>
+      <h1>Groupwise Common Subject Code Files:</h1>
+  sub_common_xxxx.txt [xxxx is the shortcut for group name previously defined]
+    </pre>
+    <pre>
+      <h1>Groupwise 4th Subject Code Files:</h1>
+  sub_4th_xxxx.txt [xxxx is the shortcut for group name previously defined]
+    </pre>
+    <pre>
+      <h1>Common Subject Code for All Groups:</h1>
+        sub_common_all.txt
+    </pre>
+    <pre>
+      <h1>Server Host Information:</h1>
+        website.txt
+
+      File Format:
+        host:ip
+
+      'ip' is optional.
+      Here I have placed the 'ip' field so that we can send form still if
+      we don't have a DNS name registered. At first, the program will try
+      to look up IP address of the 'host' specified in the file. If it fails
+      to get the required IP address, it will use the ip specified in the
+      file (if present) otherwise it will fail.
+
+      The server host name must be specified in this file.
+
+      For example:
+
+      <b>www.rajshahi-educationboard.org:202.92.52.125</b>
+
+    </pre>
+    <pre>
+      <h1>College Code File:</h1>
+      (This file contains college code =&gt; name mapping information)
+        college.txt
+
+
+      File Format:
+	college_code College Name
+        ...
+
+      For example:
+
+       1025 RAJSHAHI GOVT. COLLEGE
+       1026 RAJSHAHI CANT. COLLEGE
+       ...
+
+    </pre>
+  </body>
+</html>

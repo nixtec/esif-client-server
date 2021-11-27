@@ -1,0 +1,20 @@
+Checking for RUNUSER environment variable... NOT FOUND. Running as current user
+main: Waiting for connections ...
+thread 2953318400: doit: remote_addr = 127.0.0.1, connfd = 5
+DB->get: DB_NOTFOUND: No matching key/data pair found
+thread 2953318400: manage_client: r_addr = 127.0.0.1, conn_id = 5 : setting timeout
+thread 2953318400: manage_client: r_addr = 127.0.0.1, conn_id = 5: Waiting for magic ... [  OK  ]
+thread 2953318400: manage_client: r_addr = 127.0.0.1, conn_id = 5: sending feedback to client
+thread 2953318400: manage_client: r_addr = 127.0.0.1, conn_id = 5: waiting for username ... [  OK  ]
+thread 2953318400: manage_client: r_addr = 127.0.0.1, conn_id = 5: looking up user : 1025     thread 2953318400: manage_client: r_addr thread 2953318400: doit: remote_addr = 127.0.0.1, connfd = 5
+= 127.0.0.1, conn_id = 5: lookup_user: 1025: no such user found
+thread 2953318400: manage_client: r_addr = 127.0.0.1, conn_id = 5 : setting timeout
+thread 2953318400: manage_client: r_addr = 127.0.0.1, conn_id = 5: Waiting for magic ... [  OK  ]
+thread 2953318400: manage_client: r_addr = 127.0.0.1, conn_id = 5: sending feedback to client
+thread 2953318400: manage_client: r_addr = 127.0.0.1, conn_id = 5: waiting for username ... [  OK  ]
+thread 2953318400: manage_client: r_addr = 127.0.0.1, conn_id = 5: lookDB->get: DB_NOTFOUND: No matching key/data pair found
+ing up user : 1025     thread 2953318400: manage_client: r_addr = 127.0.0.1, conn_id = 5: lookup_user: 1025: no such user found
+
+handle_signal: signo = 15
+exiting
+Closing password database

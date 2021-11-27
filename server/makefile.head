@@ -1,0 +1,22 @@
+# we're very strict in compiling C programs
+# -g3 gives more debugging information (default is 2) 
+WARN     := -W -Wall -Wstrict-prototypes -Wmissing-prototypes
+# the following three lines are for gcc version 3.3.2 (you can modify them for other versions)
+GMAJOR   := 3
+GMINOR   := 3
+GPATCH   := 2
+#BDBHOME  := /usr/local/BerkeleyDB.4.3
+BDBHOME  := /opt/local
+CC1      := /usr/lib/gcc-lib/i386-redhat-linux/${GMAJOR}.${GMINOR}.${GPATCH}/cc1
+CC1FLAGS := -D__GNUC__=${GMAJOR} -D__GNUC_MINOR__=${GMINOR} -D__GNUC_PATCHLEVEL__=${GPATCH}
+INCLUDE  := -I$(BDBHOME)/include/db46
+CFLAGS   := -D_REENTRANT -g3 -O2 ${WARN} ${INCLUDE}
+LDFLAGS  := -lcrypto -lpthread -L$(BDBHOME)/lib/db46 -ldb
+CXXFLAGS := ${CFLAGS}
+CC       := gcc
+CXX      := g++
+LD       := ld
+AS       := as
+AR       := ar
+ASFLAGS  := -gstabs
+ARFLAGS  := -crv

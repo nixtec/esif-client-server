@@ -1,0 +1,134 @@
+#!/bin/sh
+#
+# rc.eduserver
+#
+
+# Source networking configuration.
+#. /etc/sysconfig/network
+
+# Check that networking is up.
+[ "${NETWORKING}" = "no" ] && exit 0
+
+umask 0022
+
+FULLPROGPATH="./eduserver"
+OPTIONS="--acceptimage"
+
+[ -x $FULLPROGPATH ] || { echo "$FULLPROGPATH not found"; exit 0; }
+
+RETVAL=0
+prog="`basename $FULLPROGPATH`"
+
+#RUNUSER="rajshahi"
+#RUNGROUP="rajshahi"
+
+TXTDIR="var/regform/text/Rajshahi"
+BDBDIR="var/regform/bdb/Rajshahi"
+#ERRDIR="var/regform/error/Rajshahi"
+LOGFILE="tmp/eduserver.log"
+PASSDIR="var/regform/passwd"
+PASSDB="${PASSDIR}/pass.db"
+PIDFILE="var/run/eduserver.pid"
+
+start() {
+  echo "Starting $prog ..."
+  mkdir -p $TXTDIR
+#  chown ${RUNUSER}:${RUNGROUP} $TXTDIR
+  mkdir -p $BDBDIR
+#  chown ${RUNUSER}:${RUNGROUP} $BDBDIR
+#  mkdir -p $ERRDIR
+#  chown ${RUNUSER}:${RUNGROUP} $ERRDIR
+  mkdir -p $PASSDIR
+#  chown ${RUNUSER}:${RUNGROUP} $PASSDIR
+#  [ -f ${PASSDB} ] && chown ${RUNUSER}:${RUNGROUP} $PASSDB
+
+  #RUNUSER=${RUNUSER} PASSDB=${PASSDB} $FULLPROGPATH $OPTIONS &> $LOGFILE &
+  PASSDB=${PASSDB} $FULLPROGPATH $OPTIONS &> $LOGFILE &
+  echo $! > $PIDFILE
+  touch var/lock/subsys/$prog
+
+  return 0
+}
+
+stop() {
+  echo "Shutting down $prog "
+  if [ -f $PIDFILE ] ; then
+    pid=`cat $PIDFILE`
+    kill -s TERM $pid
+    RETVAL=$?
+    [ $RETVAL -eq 0 ] && echo "[  OK  ]"
+  else
+    echo "$PIDFILE missing, kill manually"
+    RETVAL=1
+  fi
+  [ $RETVAL -eq 0 ] && rm -f var/lock/subsys/$prog
+  return $RETVAL
+}
+
+# reload password database
+reload() {
+  echo "Reloading password database ..."
+  if [ -f $PIDFILE ] ; then
+    pid=`cat $PIDFILE`
+    kill -s HUP $pid
+    RETVAL=$?
+  else
+    echo "$PIDFILE missing, kill (HUP) manually"
+    RETVAL=1
+  fi
+  [ $RETVAL -eq 0 ] && touch var/lock/subsys/$prog
+  return $RETVAL
+}
+
+# See how we were called.
+case "$1" in
+  start)
+  curuser="`id -un`"
+#  if [ "$curuser" != "root" ]; then
+#    echo "You must be <root> to run this program"
+#    exit 1
+#  fi
+        start
+	RETVAL=$?
+	ps ax | grep $FULLPROGPATH
+        ;;
+  stop)
+  curuser="`id -un`"
+#  if [ "$curuser" != "root" ]; then
+#    echo "You must be <root> to run this program"
+#    exit 1
+#  fi
+        stop
+	RETVAL=$?
+        ;;
+  restart)
+  curuser="`id -un`"
+#  if [ "$curuser" != "root" ]; then
+#    echo "You must be <root> to run this program"
+#    exit 1
+#  fi
+        stop
+        start
+        RETVAL=$?
+	ps ax | grep $FULLPROGPATH
+        ;;
+  reload)
+  curuser="`id -un`"
+#  if [ "$curuser" != "root" ]; then
+#    echo "You must be <root> to run this program"
+#    exit 1
+#  fi
+        reload
+        RETVAL=$?
+	ps ax | grep $FULLPROGPATH
+        ;;
+  status)
+	ps ax | grep $FULLPROGPATH
+        RETVAL=$?
+        ;;
+  *)
+        echo $"Usage: $0 {start|stop|restart|reload|status}"
+        exit 1
+esac
+
+exit $RETVAL

@@ -1,0 +1,38 @@
+ Volume in drive D has no label.
+ Volume Serial Number is D5ED-CB04
+
+ Directory of D:\cd\GRUNTIME\bin
+
+01/10/2004  10:03a              20,480 envsubst.exe
+03/31/2005  11:00a               4,575 subcode.txt
+03/08/2005  12:46a                   0 sub_4th_agri.txt
+03/31/2005  11:03a                  38 sub_4th_arts.txt
+03/24/2005  01:02p                  40 sub_4th_busi.txt
+03/24/2005  01:02p                  40 sub_4th_com.txt
+03/24/2005  01:03p                  52 sub_4th_home_eco.txt
+03/24/2005  01:04p                  40 sub_4th_is_st.txt
+03/08/2005  12:46a                   0 sub_4th_music.txt
+03/24/2005  01:00p                  64 sub_4th_sc.txt
+03/08/2005  12:43a                   0 sub_4th_so_sc.txt
+03/05/2005  05:20p                  32 sub_agri.txt
+02/06/2005  01:03a                  32 sub_agri.txt~
+03/09/2005  05:48p                 228 sub_arts.txt
+03/09/2005  05:45p                  96 sub_busi.txt
+03/24/2005  12:49p                  32 sub_com.txt
+01/27/2005  01:29p                  16 sub_common_agri.txt
+01/27/2005  01:27p                  16 sub_common_all.txt
+03/09/2005  05:37p                  16 sub_common_arts.txt
+03/09/2005  05:42p                  32 sub_common_busi.txt
+03/09/2005  05:49p                  96 sub_common_com.txt
+03/09/2005  06:03p                 180 sub_common_home_eco.txt
+03/09/2005  06:08p                 144 sub_common_is_st.txt
+01/27/2005  01:30p                  16 sub_common_music.txt
+03/09/2005  04:16p                 160 sub_common_sc.txt
+01/27/2005  01:26p                  16 sub_common_so_sc.txt
+03/09/2005  06:03p                  44 sub_home_eco.txt
+03/09/2005  06:04p                  40 sub_is_st.txt
+02/06/2005  01:04a                  32 sub_music.txt
+03/09/2005  05:35p                 160 sub_sc.txt
+03/09/2005  06:09p                  16 sub_so_sc.txt
+              31 File(s)         26,733 bytes
+               0 Dir(s)  17,345,646,592 bytes free
